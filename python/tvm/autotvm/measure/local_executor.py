@@ -57,10 +57,33 @@ def _execute_func(func, queue, args, kwargs):
 def call_with_timeout(queue, timeout, func, args, kwargs):
     """A wrapper to support timeout of a function call"""
 
+    import time
     # start a new process for timeout (cannot use thread because we have c function)
     p = Process(target=_execute_func, args=(func, queue, args, kwargs))
+    #measure the timeout aditya
+    print("Timeout is: ",timeout)
+    timeout = 5000
     p.start()
+    start_time = time.time()
     p.join(timeout=timeout)
+    end_time = time.time()
+    queue.put(executor.TimeoutError())
+
+    print("Timeout time is. Timeout is ",(end_time-start_time),timeout)
+    kill_child_processes(p.pid)
+    p.terminate()
+    p.join()
+
+
+def call_without_timeout(queue, timeout, func, args, kwargs):
+    """A wrapper to support a function call without timeout. Adi extended it"""
+
+    # start a new process for timeout (cannot use thread because we have c function)
+    p = Process(target=_execute_func, args=(func, queue, args, kwargs))
+    #measure the timeout aditya
+    print("Timeout is %s",timeout)
+    p.start()
+    p.join()
 
     queue.put(executor.TimeoutError())
 
@@ -68,6 +91,7 @@ def call_with_timeout(queue, timeout, func, args, kwargs):
     p.terminate()
     p.join()
 
+    
 
 class LocalFuture(executor.Future):
     """Local wrapper for the future

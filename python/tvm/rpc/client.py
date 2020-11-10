@@ -288,6 +288,57 @@ class TrackerSession(object):
         res += separate_line
         return res
 
+    #Original request code.
+    def request_original(self, key, priority=1, session_timeout=0, max_retry=5):
+        """Request a new connection from the tracker.
+
+        Parameters
+        ----------
+        key : str
+            The type key of the device.
+
+        priority : int, optional
+            The priority of the request.
+
+        session_timeout : float, optional
+            The duration of the session, allows server to kill
+            the connection when duration is longer than this value.
+            When duration is zero, it means the request must always be kept alive.
+
+        max_retry : int, optional
+            Maximum number of times to retry before give up.
+        """
+        last_err = None
+        for _ in range(max_retry):
+            try:
+                if self._sock is None:
+                    self._connect()
+                base.sendjson(self._sock,
+                              [base.TrackerCode.REQUEST, key, "", priority])
+                value = base.recvjson(self._sock)
+                #aditya's modification
+                print("Value received from Tracker: %s, the key was %s",value,key)
+                #qsk for another value
+                '''
+                base.sendjson(self._sock,
+                              [base.TrackerCode.REQUEST, key, "", priority])
+                value2 = base.recvjson(self._sock)
+                print("2nd value %s",value2)
+                '''
+                if value[0] != base.TrackerCode.SUCCESS:
+                    raise RuntimeError("Invalid return value %s" % str(value))
+                url, port, matchkey = value[1]
+                return connect(url, port, matchkey, session_timeout)
+            except socket.error as err:
+                self.close()
+                last_err = err
+            except TVMError as err:
+                last_err = err
+        raise RuntimeError(
+            "Cannot request %s after %d retry, last_error:%s" % (
+                key, max_retry, str(last_err)))
+
+
     def request(self, key, priority=1, session_timeout=0, max_retry=5):
         """Request a new connection from the tracker.
 
@@ -315,6 +366,15 @@ class TrackerSession(object):
                 base.sendjson(self._sock,
                               [base.TrackerCode.REQUEST, key, "", priority])
                 value = base.recvjson(self._sock)
+                #aditya's modification
+                print("Value received from Tracker: %s, the key was %s",value,key)
+                '''
+                #ask for another value
+                base.sendjson(self._sock,
+                              [base.TrackerCode.REQUEST, key, "", priority])
+                value2 = base.recvjson(self._sock)
+                print("2nd value %s",value2)
+                '''
                 if value[0] != base.TrackerCode.SUCCESS:
                     raise RuntimeError("Invalid return value %s" % str(value))
                 url, port, matchkey = value[1]
@@ -328,6 +388,58 @@ class TrackerSession(object):
             "Cannot request %s after %d retry, last_error:%s" % (
                 key, max_retry, str(last_err)))
 
+    def request_and_run_original(self,
+                        key,
+                        func,
+                        priority=1,
+                        session_timeout=0,
+                        max_retry=2):
+        """Request a resource from tracker and run the func.
+
+        This function safe-guard rare server node dropout during execution.
+        In such case, a new resource will be requested and func will be ran again.
+
+        Parameters
+        ----------
+        key : str
+            The type key of the device.
+
+        func : function of session -> value
+            A stateless function
+
+        priority : int, optional
+            The priority of the request.
+
+        session_timeout : float, optional
+            The duration of the session, allows server to kill
+            the connection when duration is longer than this value.
+            When duration is zero, it means the request must always be kept alive.
+
+        max_retry : int, optional
+            Maximum number of times to retry the function before give up.
+        """
+        last_err = None
+        for _ in range(max_retry):
+            try:
+                sess = self.request(key,
+                                    priority=priority,
+                                    session_timeout=session_timeout)
+                tstart = time.time()
+                return func(sess)
+            except TVMError as err:
+                duration = time.time() - tstart
+                # roughly estimate if the error is due to timeout termination
+                if session_timeout and duration >= session_timeout * 0.95:
+                    raise RuntimeError(
+                        "Session timeout when running %s" % func.__name__)
+                last_err = err
+        raise RuntimeError(
+            "Failed to run on %s after %d retry, last_error:%s" % (
+                key, max_retry, str(last_err)))
+
+
+
+    
     def request_and_run(self,
                         key,
                         func,

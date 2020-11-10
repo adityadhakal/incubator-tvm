@@ -1,0 +1,57 @@
+[09:06:38] main.cc:84: host        = 0.0.0.0
+[09:06:38] main.cc:85: port        = 9090
+[09:06:38] main.cc:86: port_end    = 9099
+[09:06:38] main.cc:87: tracker     = ('192.168.0.90', 9190)
+[09:06:38] main.cc:88: key         = aditya
+[09:06:38] main.cc:89: custom_addr = 
+[09:06:38] main.cc:90: silent      = False
+[09:06:38] main.cc:240: Starting CPP Server, Press Ctrl+C to stop.
+[09:06:38] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9090
+[09:06:38] rpc_server.cc:120: bind to 0.0.0.0:9091
+[09:06:38] rpc_tracker_client.h:198: Tracker connecting to 192.168.0.90:9190
+[09:23:17] rpc_server.cc:418: Connection success 192.168.0.80:44732
+[09:23:18] rpc_server.cc:211: GPU Memory: Total: 15 Free: 12 Occupied Mem: 3 Time GPU is Reset: 0
+PID of the Process: 123731
+Base Directory : ./rpc_123731
+[09:23:18] rpc_server.cc:435: Finish serving 192.168.0.80:44732
+[09:23:18] rpc_server.cc:231: Socket Closed
+[09:23:18] rpc_server.cc:234: Last CUDA ERROR: 0
+[09:23:18] rpc_server.cc:241: Counting the number of instances Tuned till now: 1 Multiprocessor count: 80
+[09:23:27] rpc_server.cc:418: Connection success 192.168.0.80:44752
+[09:23:27] rpc_server.cc:211: GPU Memory: Total: 15 Free: 12 Occupied Mem: 3 Time GPU is Reset: 0
+PID of the Process: 123731
+Base Directory : ./rpc_123731
+PID of the Process: 123731
+Base Directory : ./rpc_123731
+PID of the Process: 123731
+Base Directory : ./rpc_123731
+[09:23:27] rpc_env.cc:75: Load module from ./rpc_123731/tmp_func_1af915cf1644f2b7.tar.so ...
+[09:23:28] rpc_server.cc:435: Finish serving 192.168.0.80:44752
+[09:23:28] rpc_server.cc:231: Socket Closed
+[09:23:28] rpc_server.cc:234: Last CUDA ERROR: 0
+[09:23:28] rpc_server.cc:241: Counting the number of instances Tuned till now: 2 Multiprocessor count: 80
+[09:23:28] rpc_server.cc:418: Connection success 192.168.0.80:44876
+[09:23:28] rpc_server.cc:211: GPU Memory: Total: 15 Free: 14 Occupied Mem: 0 Time GPU is Reset: 0
+PID of the Process: 123731
+Base Directory : ./rpc_123731
+[09:23:29] rpc_env.cc:75: Load module from ./rpc_123731/tmp_func_810bb1cb84ab3e5c.tar.so ...
+[09:23:30] rpc_server.cc:435: Finish serving 192.168.0.80:44876
+[09:23:30] rpc_server.cc:231: Socket Closed
+[09:23:30] rpc_server.cc:234: Last CUDA ERROR: 0
+[09:23:30] rpc_server.cc:241: Counting the number of instances Tuned till now: 3 Multiprocessor count: 80
+[09:23:30] rpc_server.cc:418: Connection success 192.168.0.80:44880
+[09:23:30] rpc_server.cc:211: GPU Memory: Total: 15 Free: 14 Occupied Mem: 0 Time GPU is Reset: 0
+PID of the Process: 123731
+Base Directory : ./rpc_123731
+[09:23:30] rpc_env.cc:75: Load module from ./rpc_123731/tmp_func_c2a5e3ce8e654744.tar.so ...
+[09:23:34] rpc_server.cc:435: Finish serving 192.168.0.80:44880
+[09:23:34] rpc_server.cc:231: Socket Closed
+[09:23:34] rpc_server.cc:234: Last CUDA ERROR: 0
+[09:23:34] rpc_server.cc:241: Counting the number of instances Tuned till now: 4 Multiprocessor count: 80
+[09:23:34] rpc_server.cc:248: More than quarter of GPU memory exceeded. Resetting GPU context. Number of time context is reset: 1
+[09:23:35] rpc_server.cc:418: Connection success 192.168.0.80:44886
+[09:23:35] rpc_server.cc:211: GPU Memory: Total: 15 Free: 15 Occupied Mem: 0 Time GPU is Reset: 1
+PID of the Process: 123731
+Base Directory : ./rpc_123731
+[09:23:35] rpc_env.cc:75: Load module from ./rpc_123731/tmp_func_b72c136ebf902500.tar.so ...
+terminate called without an active exception

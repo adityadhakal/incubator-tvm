@@ -1,0 +1,940 @@
+[13:09:36] main.cc:84: host        = 0.0.0.0
+[13:09:36] main.cc:85: port        = 9090
+[13:09:36] main.cc:86: port_end    = 9180
+[13:09:36] main.cc:87: tracker     = ('0.0.0.0', 9190)
+[13:09:36] main.cc:88: key         = aditya
+[13:09:36] main.cc:89: custom_addr = 
+[13:09:36] main.cc:90: silent      = False
+[13:09:36] main.cc:240: Starting CPP Server, Press Ctrl+C to stop.
+[13:09:36] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9090
+[13:09:36] rpc_server.cc:120: bind to 0.0.0.0:9091
+[13:09:36] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:09:37] rpc_server.cc:468: Connection success 127.0.0.1:34886
+[13:09:37] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:37] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:37] rpc_server.cc:485: Finish serving 127.0.0.1:34886
+[13:09:37] rpc_server.cc:279: Socket Closed
+[13:09:37] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:37] rpc_server.cc:290: Counting the number of instances Tuned till now: 1
+[13:09:37] rpc_server.cc:468: Connection success 127.0.0.1:34914
+[13:09:37] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:37] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:37] rpc_server.cc:485: Finish serving 127.0.0.1:34914
+[13:09:37] rpc_server.cc:279: Socket Closed
+[13:09:37] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:37] rpc_server.cc:290: Counting the number of instances Tuned till now: 2
+[13:09:38] rpc_server.cc:468: Connection success 127.0.0.1:34926
+[13:09:38] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:38] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:38] rpc_server.cc:485: Finish serving 127.0.0.1:34926
+[13:09:38] rpc_server.cc:279: Socket Closed
+[13:09:38] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:38] rpc_server.cc:290: Counting the number of instances Tuned till now: 3
+[13:09:38] rpc_server.cc:468: Connection success 127.0.0.1:34944
+[13:09:38] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:38] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:38] rpc_server.cc:485: Finish serving 127.0.0.1:34944
+[13:09:38] rpc_server.cc:279: Socket Closed
+[13:09:38] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:38] rpc_server.cc:290: Counting the number of instances Tuned till now: 4
+[13:09:38] rpc_server.cc:468: Connection success 127.0.0.1:34968
+[13:09:38] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:38] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:38] rpc_server.cc:485: Finish serving 127.0.0.1:34968
+[13:09:38] rpc_server.cc:279: Socket Closed
+[13:09:38] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:38] rpc_server.cc:290: Counting the number of instances Tuned till now: 5
+[13:09:38] rpc_server.cc:468: Connection success 127.0.0.1:34984
+[13:09:38] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:38] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:38] rpc_server.cc:485: Finish serving 127.0.0.1:34984
+[13:09:38] rpc_server.cc:279: Socket Closed
+[13:09:38] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:38] rpc_server.cc:290: Counting the number of instances Tuned till now: 6
+[13:09:39] rpc_server.cc:468: Connection success 127.0.0.1:34986
+[13:09:39] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:39] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:39] rpc_server.cc:485: Finish serving 127.0.0.1:34986
+[13:09:39] rpc_server.cc:279: Socket Closed
+[13:09:39] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:39] rpc_server.cc:290: Counting the number of instances Tuned till now: 7
+[13:09:39] rpc_server.cc:468: Connection success 127.0.0.1:34988
+[13:09:39] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:39] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:39] rpc_server.cc:485: Finish serving 127.0.0.1:34988
+[13:09:39] rpc_server.cc:279: Socket Closed
+[13:09:39] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:39] rpc_server.cc:290: Counting the number of instances Tuned till now: 8
+[13:09:39] rpc_server.cc:468: Connection success 127.0.0.1:34990
+[13:09:39] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:39] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:39] rpc_server.cc:485: Finish serving 127.0.0.1:34990
+[13:09:39] rpc_server.cc:279: Socket Closed
+[13:09:39] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:39] rpc_server.cc:290: Counting the number of instances Tuned till now: 9
+[13:09:39] rpc_server.cc:468: Connection success 127.0.0.1:34992
+[13:09:39] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:39] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:39] rpc_server.cc:485: Finish serving 127.0.0.1:34992
+[13:09:39] rpc_server.cc:279: Socket Closed
+[13:09:39] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:39] rpc_server.cc:290: Counting the number of instances Tuned till now: 10
+[13:09:39] rpc_server.cc:468: Connection success 127.0.0.1:34994
+[13:09:39] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:39] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:40] rpc_server.cc:485: Finish serving 127.0.0.1:34994
+[13:09:40] rpc_server.cc:279: Socket Closed
+[13:09:40] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:40] rpc_server.cc:290: Counting the number of instances Tuned till now: 11
+[13:09:40] rpc_server.cc:468: Connection success 127.0.0.1:34996
+[13:09:40] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:40] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:40] rpc_server.cc:485: Finish serving 127.0.0.1:34996
+[13:09:40] rpc_server.cc:279: Socket Closed
+[13:09:40] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:40] rpc_server.cc:290: Counting the number of instances Tuned till now: 12
+[13:09:40] rpc_server.cc:468: Connection success 127.0.0.1:34998
+[13:09:40] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:40] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:40] rpc_server.cc:485: Finish serving 127.0.0.1:34998
+[13:09:40] rpc_server.cc:279: Socket Closed
+[13:09:40] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:40] rpc_server.cc:290: Counting the number of instances Tuned till now: 13
+[13:09:40] rpc_server.cc:468: Connection success 127.0.0.1:35000
+[13:09:40] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:40] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:40] rpc_server.cc:485: Finish serving 127.0.0.1:35000
+[13:09:40] rpc_server.cc:279: Socket Closed
+[13:09:40] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:40] rpc_server.cc:290: Counting the number of instances Tuned till now: 14
+[13:09:40] rpc_server.cc:468: Connection success 127.0.0.1:35002
+[13:09:40] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:40] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:40] rpc_server.cc:485: Finish serving 127.0.0.1:35002
+[13:09:40] rpc_server.cc:279: Socket Closed
+[13:09:40] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:40] rpc_server.cc:290: Counting the number of instances Tuned till now: 15
+[13:09:40] rpc_server.cc:468: Connection success 127.0.0.1:35004
+[13:09:40] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:40] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:41] rpc_server.cc:485: Finish serving 127.0.0.1:35004
+[13:09:41] rpc_server.cc:279: Socket Closed
+[13:09:41] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:41] rpc_server.cc:290: Counting the number of instances Tuned till now: 16
+[13:09:41] rpc_server.cc:468: Connection success 127.0.0.1:35006
+[13:09:41] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:41] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:41] rpc_server.cc:485: Finish serving 127.0.0.1:35006
+[13:09:41] rpc_server.cc:279: Socket Closed
+[13:09:41] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:41] rpc_server.cc:290: Counting the number of instances Tuned till now: 17
+[13:09:41] rpc_server.cc:468: Connection success 127.0.0.1:35008
+[13:09:41] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:41] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:41] rpc_server.cc:485: Finish serving 127.0.0.1:35008
+[13:09:41] rpc_server.cc:279: Socket Closed
+[13:09:41] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:41] rpc_server.cc:290: Counting the number of instances Tuned till now: 18
+[13:09:41] rpc_server.cc:468: Connection success 127.0.0.1:35010
+[13:09:41] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:41] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:41] rpc_server.cc:485: Finish serving 127.0.0.1:35010
+[13:09:41] rpc_server.cc:279: Socket Closed
+[13:09:41] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:41] rpc_server.cc:290: Counting the number of instances Tuned till now: 19
+[13:09:41] rpc_server.cc:468: Connection success 127.0.0.1:35012
+[13:09:41] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:41] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:41] rpc_server.cc:485: Finish serving 127.0.0.1:35012
+[13:09:41] rpc_server.cc:279: Socket Closed
+[13:09:41] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:41] rpc_server.cc:290: Counting the number of instances Tuned till now: 20
+[13:09:42] rpc_server.cc:468: Connection success 127.0.0.1:35014
+[13:09:42] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:42] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:42] rpc_server.cc:485: Finish serving 127.0.0.1:35014
+[13:09:42] rpc_server.cc:279: Socket Closed
+[13:09:42] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:42] rpc_server.cc:290: Counting the number of instances Tuned till now: 21
+[13:09:42] rpc_server.cc:468: Connection success 127.0.0.1:35016
+[13:09:42] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:42] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:42] rpc_server.cc:485: Finish serving 127.0.0.1:35016
+[13:09:42] rpc_server.cc:279: Socket Closed
+[13:09:42] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:42] rpc_server.cc:290: Counting the number of instances Tuned till now: 22
+[13:09:42] rpc_server.cc:468: Connection success 127.0.0.1:35018
+[13:09:42] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:42] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:42] rpc_server.cc:485: Finish serving 127.0.0.1:35018
+[13:09:42] rpc_server.cc:279: Socket Closed
+[13:09:42] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:42] rpc_server.cc:290: Counting the number of instances Tuned till now: 23
+[13:09:42] rpc_server.cc:468: Connection success 127.0.0.1:35020
+[13:09:42] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:42] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:42] rpc_server.cc:485: Finish serving 127.0.0.1:35020
+[13:09:42] rpc_server.cc:279: Socket Closed
+[13:09:42] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:42] rpc_server.cc:290: Counting the number of instances Tuned till now: 24
+[13:09:42] rpc_server.cc:468: Connection success 127.0.0.1:35022
+[13:09:42] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:42] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:42] rpc_server.cc:485: Finish serving 127.0.0.1:35022
+[13:09:42] rpc_server.cc:279: Socket Closed
+[13:09:42] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:42] rpc_server.cc:290: Counting the number of instances Tuned till now: 25
+[13:09:43] rpc_server.cc:468: Connection success 127.0.0.1:35024
+[13:09:43] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:43] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:43] rpc_server.cc:485: Finish serving 127.0.0.1:35024
+[13:09:43] rpc_server.cc:279: Socket Closed
+[13:09:43] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:43] rpc_server.cc:290: Counting the number of instances Tuned till now: 26
+[13:09:43] rpc_server.cc:468: Connection success 127.0.0.1:35026
+[13:09:43] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:43] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:43] rpc_server.cc:485: Finish serving 127.0.0.1:35026
+[13:09:43] rpc_server.cc:279: Socket Closed
+[13:09:43] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:43] rpc_server.cc:290: Counting the number of instances Tuned till now: 27
+[13:09:43] rpc_server.cc:468: Connection success 127.0.0.1:35028
+[13:09:43] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:43] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:43] rpc_server.cc:485: Finish serving 127.0.0.1:35028
+[13:09:43] rpc_server.cc:279: Socket Closed
+[13:09:43] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:43] rpc_server.cc:290: Counting the number of instances Tuned till now: 28
+[13:09:43] rpc_server.cc:468: Connection success 127.0.0.1:35030
+[13:09:43] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:43] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:43] rpc_server.cc:485: Finish serving 127.0.0.1:35030
+[13:09:43] rpc_server.cc:279: Socket Closed
+[13:09:43] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:43] rpc_server.cc:290: Counting the number of instances Tuned till now: 29
+[13:09:43] rpc_server.cc:468: Connection success 127.0.0.1:35032
+[13:09:43] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:43] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:44] rpc_server.cc:485: Finish serving 127.0.0.1:35032
+[13:09:44] rpc_server.cc:279: Socket Closed
+[13:09:44] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:44] rpc_server.cc:290: Counting the number of instances Tuned till now: 30
+[13:09:44] rpc_server.cc:468: Connection success 127.0.0.1:35034
+[13:09:44] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:44] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:44] rpc_server.cc:485: Finish serving 127.0.0.1:35034
+[13:09:44] rpc_server.cc:279: Socket Closed
+[13:09:44] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:44] rpc_server.cc:290: Counting the number of instances Tuned till now: 31
+[13:09:44] rpc_server.cc:468: Connection success 127.0.0.1:35036
+[13:09:44] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:44] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:44] rpc_server.cc:485: Finish serving 127.0.0.1:35036
+[13:09:44] rpc_server.cc:279: Socket Closed
+[13:09:44] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:44] rpc_server.cc:290: Counting the number of instances Tuned till now: 32
+[13:09:44] rpc_server.cc:468: Connection success 127.0.0.1:35038
+[13:09:44] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:44] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:44] rpc_server.cc:485: Finish serving 127.0.0.1:35038
+[13:09:44] rpc_server.cc:279: Socket Closed
+[13:09:44] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:44] rpc_server.cc:290: Counting the number of instances Tuned till now: 33
+[13:09:44] rpc_server.cc:468: Connection success 127.0.0.1:35040
+[13:09:44] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:44] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:44] rpc_server.cc:485: Finish serving 127.0.0.1:35040
+[13:09:44] rpc_server.cc:279: Socket Closed
+[13:09:44] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:44] rpc_server.cc:290: Counting the number of instances Tuned till now: 34
+[13:09:44] rpc_server.cc:468: Connection success 127.0.0.1:35042
+[13:09:44] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:44] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:45] rpc_server.cc:485: Finish serving 127.0.0.1:35042
+[13:09:45] rpc_server.cc:279: Socket Closed
+[13:09:45] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:45] rpc_server.cc:290: Counting the number of instances Tuned till now: 35
+[13:09:45] rpc_server.cc:468: Connection success 127.0.0.1:35044
+[13:09:45] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:45] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:45] rpc_server.cc:485: Finish serving 127.0.0.1:35044
+[13:09:45] rpc_server.cc:279: Socket Closed
+[13:09:45] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:45] rpc_server.cc:290: Counting the number of instances Tuned till now: 36
+[13:09:45] rpc_server.cc:468: Connection success 127.0.0.1:35046
+[13:09:45] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:45] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:45] rpc_server.cc:485: Finish serving 127.0.0.1:35046
+[13:09:45] rpc_server.cc:279: Socket Closed
+[13:09:45] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:45] rpc_server.cc:290: Counting the number of instances Tuned till now: 37
+[13:09:45] rpc_server.cc:468: Connection success 127.0.0.1:35048
+[13:09:45] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:45] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:45] rpc_server.cc:485: Finish serving 127.0.0.1:35048
+[13:09:45] rpc_server.cc:279: Socket Closed
+[13:09:45] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:45] rpc_server.cc:290: Counting the number of instances Tuned till now: 38
+[13:09:45] rpc_server.cc:468: Connection success 127.0.0.1:35050
+[13:09:45] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:45] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:45] rpc_server.cc:485: Finish serving 127.0.0.1:35050
+[13:09:45] rpc_server.cc:279: Socket Closed
+[13:09:45] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:45] rpc_server.cc:290: Counting the number of instances Tuned till now: 39
+[13:09:46] rpc_server.cc:468: Connection success 127.0.0.1:35052
+[13:09:46] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:46] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:46] rpc_server.cc:485: Finish serving 127.0.0.1:35052
+[13:09:46] rpc_server.cc:279: Socket Closed
+[13:09:46] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:46] rpc_server.cc:290: Counting the number of instances Tuned till now: 40
+[13:09:46] rpc_server.cc:468: Connection success 127.0.0.1:35054
+[13:09:46] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:46] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:46] rpc_server.cc:485: Finish serving 127.0.0.1:35054
+[13:09:46] rpc_server.cc:279: Socket Closed
+[13:09:46] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:46] rpc_server.cc:290: Counting the number of instances Tuned till now: 41
+[13:09:46] rpc_server.cc:468: Connection success 127.0.0.1:35056
+[13:09:46] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:46] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:46] rpc_server.cc:485: Finish serving 127.0.0.1:35056
+[13:09:46] rpc_server.cc:279: Socket Closed
+[13:09:46] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:46] rpc_server.cc:290: Counting the number of instances Tuned till now: 42
+[13:09:46] rpc_server.cc:468: Connection success 127.0.0.1:35058
+[13:09:46] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:46] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:46] rpc_server.cc:485: Finish serving 127.0.0.1:35058
+[13:09:46] rpc_server.cc:279: Socket Closed
+[13:09:46] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:46] rpc_server.cc:290: Counting the number of instances Tuned till now: 43
+[13:09:46] rpc_server.cc:468: Connection success 127.0.0.1:35060
+[13:09:46] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:46] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:47] rpc_server.cc:485: Finish serving 127.0.0.1:35060
+[13:09:47] rpc_server.cc:279: Socket Closed
+[13:09:47] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:47] rpc_server.cc:290: Counting the number of instances Tuned till now: 44
+[13:09:47] rpc_server.cc:468: Connection success 127.0.0.1:35062
+[13:09:47] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:47] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:47] rpc_server.cc:485: Finish serving 127.0.0.1:35062
+[13:09:47] rpc_server.cc:279: Socket Closed
+[13:09:47] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:47] rpc_server.cc:290: Counting the number of instances Tuned till now: 45
+[13:09:47] rpc_server.cc:468: Connection success 127.0.0.1:35064
+[13:09:47] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:47] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:47] rpc_server.cc:485: Finish serving 127.0.0.1:35064
+[13:09:47] rpc_server.cc:279: Socket Closed
+[13:09:47] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:47] rpc_server.cc:290: Counting the number of instances Tuned till now: 46
+[13:09:47] rpc_server.cc:468: Connection success 127.0.0.1:35066
+[13:09:47] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:47] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:47] rpc_server.cc:485: Finish serving 127.0.0.1:35066
+[13:09:47] rpc_server.cc:279: Socket Closed
+[13:09:47] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:47] rpc_server.cc:290: Counting the number of instances Tuned till now: 47
+[13:09:47] rpc_server.cc:468: Connection success 127.0.0.1:35068
+[13:09:47] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:47] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:47] rpc_server.cc:485: Finish serving 127.0.0.1:35068
+[13:09:47] rpc_server.cc:279: Socket Closed
+[13:09:47] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:47] rpc_server.cc:290: Counting the number of instances Tuned till now: 48
+[13:09:59] rpc_server.cc:468: Connection success 127.0.0.1:35076
+[13:09:59] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:59] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:59] rpc_server.cc:485: Finish serving 127.0.0.1:35076
+[13:09:59] rpc_server.cc:279: Socket Closed
+[13:09:59] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:59] rpc_server.cc:290: Counting the number of instances Tuned till now: 49
+[13:09:59] rpc_server.cc:468: Connection success 127.0.0.1:35086
+[13:09:59] rpc_server.cc:231: CUDA error before loading module 0
+[13:09:59] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:09:59] rpc_server.cc:485: Finish serving 127.0.0.1:35086
+[13:09:59] rpc_server.cc:279: Socket Closed
+[13:09:59] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:09:59] rpc_server.cc:290: Counting the number of instances Tuned till now: 50
+[13:10:00] rpc_server.cc:468: Connection success 127.0.0.1:35108
+[13:10:00] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:00] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:00] rpc_server.cc:485: Finish serving 127.0.0.1:35108
+[13:10:00] rpc_server.cc:279: Socket Closed
+[13:10:00] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:00] rpc_server.cc:290: Counting the number of instances Tuned till now: 51
+[13:10:00] rpc_server.cc:468: Connection success 127.0.0.1:35124
+[13:10:00] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:00] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:00] rpc_server.cc:485: Finish serving 127.0.0.1:35124
+[13:10:00] rpc_server.cc:279: Socket Closed
+[13:10:00] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:00] rpc_server.cc:290: Counting the number of instances Tuned till now: 52
+[13:10:00] rpc_server.cc:468: Connection success 127.0.0.1:35142
+[13:10:00] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:00] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:00] rpc_server.cc:485: Finish serving 127.0.0.1:35142
+[13:10:00] rpc_server.cc:279: Socket Closed
+[13:10:00] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:00] rpc_server.cc:290: Counting the number of instances Tuned till now: 53
+[13:10:00] rpc_server.cc:468: Connection success 127.0.0.1:35154
+[13:10:00] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:00] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:00] rpc_server.cc:485: Finish serving 127.0.0.1:35154
+[13:10:00] rpc_server.cc:279: Socket Closed
+[13:10:00] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:00] rpc_server.cc:290: Counting the number of instances Tuned till now: 54
+[13:10:00] rpc_server.cc:468: Connection success 127.0.0.1:35164
+[13:10:00] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:00] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:01] rpc_server.cc:485: Finish serving 127.0.0.1:35164
+[13:10:01] rpc_server.cc:279: Socket Closed
+[13:10:01] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:01] rpc_server.cc:290: Counting the number of instances Tuned till now: 55
+[13:10:01] rpc_server.cc:468: Connection success 127.0.0.1:35166
+[13:10:01] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:01] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:01] rpc_server.cc:485: Finish serving 127.0.0.1:35166
+[13:10:01] rpc_server.cc:279: Socket Closed
+[13:10:01] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:01] rpc_server.cc:290: Counting the number of instances Tuned till now: 56
+[13:10:01] rpc_server.cc:468: Connection success 127.0.0.1:35168
+[13:10:01] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:01] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:01] rpc_server.cc:485: Finish serving 127.0.0.1:35168
+[13:10:01] rpc_server.cc:279: Socket Closed
+[13:10:01] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:01] rpc_server.cc:290: Counting the number of instances Tuned till now: 57
+[13:10:01] rpc_server.cc:468: Connection success 127.0.0.1:35170
+[13:10:01] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:01] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:01] rpc_server.cc:485: Finish serving 127.0.0.1:35170
+[13:10:01] rpc_server.cc:279: Socket Closed
+[13:10:01] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:01] rpc_server.cc:290: Counting the number of instances Tuned till now: 58
+[13:10:01] rpc_server.cc:468: Connection success 127.0.0.1:35172
+[13:10:01] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:01] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:01] rpc_server.cc:485: Finish serving 127.0.0.1:35172
+[13:10:01] rpc_server.cc:279: Socket Closed
+[13:10:01] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:01] rpc_server.cc:290: Counting the number of instances Tuned till now: 59
+[13:10:02] rpc_server.cc:468: Connection success 127.0.0.1:35174
+[13:10:02] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:02] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:02] rpc_server.cc:485: Finish serving 127.0.0.1:35174
+[13:10:02] rpc_server.cc:279: Socket Closed
+[13:10:02] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:02] rpc_server.cc:290: Counting the number of instances Tuned till now: 60
+[13:10:02] rpc_server.cc:468: Connection success 127.0.0.1:35176
+[13:10:02] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:02] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:02] rpc_server.cc:485: Finish serving 127.0.0.1:35176
+[13:10:02] rpc_server.cc:279: Socket Closed
+[13:10:02] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:02] rpc_server.cc:290: Counting the number of instances Tuned till now: 61
+[13:10:02] rpc_server.cc:468: Connection success 127.0.0.1:35178
+[13:10:02] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:02] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:02] rpc_server.cc:485: Finish serving 127.0.0.1:35178
+[13:10:02] rpc_server.cc:279: Socket Closed
+[13:10:02] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:02] rpc_server.cc:290: Counting the number of instances Tuned till now: 62
+[13:10:02] rpc_server.cc:468: Connection success 127.0.0.1:35180
+[13:10:02] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:02] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:02] rpc_server.cc:485: Finish serving 127.0.0.1:35180
+[13:10:02] rpc_server.cc:279: Socket Closed
+[13:10:02] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:02] rpc_server.cc:290: Counting the number of instances Tuned till now: 63
+[13:10:02] rpc_server.cc:468: Connection success 127.0.0.1:35182
+[13:10:02] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:02] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:02] rpc_server.cc:485: Finish serving 127.0.0.1:35182
+[13:10:02] rpc_server.cc:279: Socket Closed
+[13:10:02] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:02] rpc_server.cc:290: Counting the number of instances Tuned till now: 64
+[13:10:03] rpc_server.cc:468: Connection success 127.0.0.1:35184
+[13:10:03] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:03] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:03] rpc_server.cc:485: Finish serving 127.0.0.1:35184
+[13:10:03] rpc_server.cc:279: Socket Closed
+[13:10:03] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:03] rpc_server.cc:290: Counting the number of instances Tuned till now: 65
+[13:10:03] rpc_server.cc:468: Connection success 127.0.0.1:35186
+[13:10:03] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:03] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:03] rpc_server.cc:485: Finish serving 127.0.0.1:35186
+[13:10:03] rpc_server.cc:279: Socket Closed
+[13:10:03] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:03] rpc_server.cc:290: Counting the number of instances Tuned till now: 66
+[13:10:03] rpc_server.cc:468: Connection success 127.0.0.1:35188
+[13:10:03] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:03] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:03] rpc_server.cc:485: Finish serving 127.0.0.1:35188
+[13:10:03] rpc_server.cc:279: Socket Closed
+[13:10:03] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:03] rpc_server.cc:290: Counting the number of instances Tuned till now: 67
+[13:10:03] rpc_server.cc:468: Connection success 127.0.0.1:35190
+[13:10:03] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:03] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:03] rpc_server.cc:485: Finish serving 127.0.0.1:35190
+[13:10:03] rpc_server.cc:279: Socket Closed
+[13:10:03] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:03] rpc_server.cc:290: Counting the number of instances Tuned till now: 68
+[13:10:03] rpc_server.cc:468: Connection success 127.0.0.1:35192
+[13:10:03] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:03] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:04] rpc_server.cc:485: Finish serving 127.0.0.1:35192
+[13:10:04] rpc_server.cc:279: Socket Closed
+[13:10:04] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:04] rpc_server.cc:290: Counting the number of instances Tuned till now: 69
+[13:10:04] rpc_server.cc:468: Connection success 127.0.0.1:35194
+[13:10:04] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:04] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:04] rpc_server.cc:485: Finish serving 127.0.0.1:35194
+[13:10:04] rpc_server.cc:279: Socket Closed
+[13:10:04] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:04] rpc_server.cc:290: Counting the number of instances Tuned till now: 70
+[13:10:04] rpc_server.cc:468: Connection success 127.0.0.1:35196
+[13:10:04] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:04] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:04] rpc_server.cc:485: Finish serving 127.0.0.1:35196
+[13:10:04] rpc_server.cc:279: Socket Closed
+[13:10:04] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:04] rpc_server.cc:290: Counting the number of instances Tuned till now: 71
+[13:10:04] rpc_server.cc:468: Connection success 127.0.0.1:35198
+[13:10:04] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:04] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:04] rpc_server.cc:485: Finish serving 127.0.0.1:35198
+[13:10:04] rpc_server.cc:279: Socket Closed
+[13:10:04] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:04] rpc_server.cc:290: Counting the number of instances Tuned till now: 72
+[13:10:04] rpc_server.cc:468: Connection success 127.0.0.1:35200
+[13:10:04] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:04] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:04] rpc_server.cc:485: Finish serving 127.0.0.1:35200
+[13:10:04] rpc_server.cc:279: Socket Closed
+[13:10:04] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:04] rpc_server.cc:290: Counting the number of instances Tuned till now: 73
+[13:10:05] rpc_server.cc:468: Connection success 127.0.0.1:35202
+[13:10:05] rpc_server.cc:231: CUDA error before loading module 0
+[13:10:05] rpc_server.cc:256: GPU Memory: Total: 15.7524 Free: 15.4165 Occupied Mem: 0.335938 Time GPU is Reset: 0
+PID of the Process: 278781
+Base Directory : ./rpc_278781
+[13:10:05] rpc_server.cc:485: Finish serving 127.0.0.1:35202
+[13:10:05] rpc_server.cc:279: Socket Closed
+[13:10:05] rpc_server.cc:283: Last CUDA ERROR: 0
+[13:10:05] rpc_server.cc:290: Counting the number of instances Tuned till now: 74
+Current working dir: /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived
+Proc 1 has died, restarting it
+[13:10:09] main.cc:84: host        = 0.0.0.0
+[13:10:09] main.cc:85: port        = 9090
+[13:10:09] main.cc:86: port_end    = 9180
+[13:10:09] main.cc:87: tracker     = ('0.0.0.0', 9190)
+[13:10:09] main.cc:88: key         = aditya
+[13:10:09] main.cc:89: custom_addr = 
+[13:10:09] main.cc:90: silent      = False
+[13:10:09] main.cc:240: Starting CPP Server, Press Ctrl+C to stop.
+[13:10:09] rpc_server.cc:120: bind to 0.0.0.0:9090
+[13:10:09] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:09] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:11] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:11] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:13] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:13] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:15] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:15] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:17] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:17] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:19] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:19] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:21] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:21] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:23] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:23] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:25] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:25] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:27] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:27] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:29] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:29] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:31] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:31] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:33] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:33] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:35] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:35] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:37] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:37] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:39] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:39] rpc_server.cc:173: Exception standard: [13:10:39] rpc_tracker_client.h:205: Check failed: period < timeout: Failed to connect to server0.0.0.0:9190
+Stack trace:
+  [bt] (0) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc(dmlc::LogMessageFatal::~LogMessageFatal()+0x32) [0x40a822]
+  [bt] (1) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x4168fd]
+  [bt] (2) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x418733]
+  [bt] (3) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41d43a]
+  [bt] (4) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41478d]
+  [bt] (5) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x414869]
+  [bt] (6) /lib/x86_64-linux-gnu/libpthread.so.0(+0xea99) [0x7f80b228ba99]
+  [bt] (7) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x417bed]
+  [bt] (8) /root/anaconda3/lib/libstdc++.so.6(+0xc8421) [0x7f80b25eb421]
+
+
+[13:10:39] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:39] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:41] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:41] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:43] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:43] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:45] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:45] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:47] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:47] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:49] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:49] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:51] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:51] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:53] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:53] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:55] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:55] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:57] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:57] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:10:59] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:10:59] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:01] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:01] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:03] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:03] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:05] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:05] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:07] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:07] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:09] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:09] rpc_server.cc:173: Exception standard: [13:11:09] rpc_tracker_client.h:205: Check failed: period < timeout: Failed to connect to server0.0.0.0:9190
+Stack trace:
+  [bt] (0) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc(dmlc::LogMessageFatal::~LogMessageFatal()+0x32) [0x40a822]
+  [bt] (1) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x4168fd]
+  [bt] (2) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x418733]
+  [bt] (3) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41d43a]
+  [bt] (4) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41478d]
+  [bt] (5) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x414869]
+  [bt] (6) /lib/x86_64-linux-gnu/libpthread.so.0(+0xea99) [0x7f80b228ba99]
+  [bt] (7) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x417bed]
+  [bt] (8) /root/anaconda3/lib/libstdc++.so.6(+0xc8421) [0x7f80b25eb421]
+
+
+[13:11:09] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:09] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:11] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:11] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:13] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:13] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:15] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:15] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:17] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:17] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:19] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:19] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:21] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:21] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:23] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:23] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:25] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:25] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:27] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:27] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:29] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:29] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:31] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:31] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:33] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:33] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:35] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:35] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:37] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:37] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:39] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:39] rpc_server.cc:173: Exception standard: [13:11:39] rpc_tracker_client.h:205: Check failed: period < timeout: Failed to connect to server0.0.0.0:9190
+Stack trace:
+  [bt] (0) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc(dmlc::LogMessageFatal::~LogMessageFatal()+0x32) [0x40a822]
+  [bt] (1) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x4168fd]
+  [bt] (2) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x418733]
+  [bt] (3) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41d43a]
+  [bt] (4) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41478d]
+  [bt] (5) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x414869]
+  [bt] (6) /lib/x86_64-linux-gnu/libpthread.so.0(+0xea99) [0x7f80b228ba99]
+  [bt] (7) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x417bed]
+  [bt] (8) /root/anaconda3/lib/libstdc++.so.6(+0xc8421) [0x7f80b25eb421]
+
+
+[13:11:39] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:39] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:41] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:41] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:43] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:43] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:45] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:45] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:47] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:47] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:49] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:49] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:51] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:51] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:53] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:53] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:55] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:55] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:57] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:57] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:11:59] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:11:59] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:01] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:01] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:03] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:03] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:05] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:05] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:07] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:07] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:09] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:09] rpc_server.cc:173: Exception standard: [13:12:09] rpc_tracker_client.h:205: Check failed: period < timeout: Failed to connect to server0.0.0.0:9190
+Stack trace:
+  [bt] (0) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc(dmlc::LogMessageFatal::~LogMessageFatal()+0x32) [0x40a822]
+  [bt] (1) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x4168fd]
+  [bt] (2) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x418733]
+  [bt] (3) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41d43a]
+  [bt] (4) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41478d]
+  [bt] (5) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x414869]
+  [bt] (6) /lib/x86_64-linux-gnu/libpthread.so.0(+0xea99) [0x7f80b228ba99]
+  [bt] (7) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x417bed]
+  [bt] (8) /root/anaconda3/lib/libstdc++.so.6(+0xc8421) [0x7f80b25eb421]
+
+
+[13:12:09] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:09] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:11] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:11] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:13] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:13] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:15] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:15] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:17] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:17] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:19] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:19] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:21] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:21] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:23] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:23] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:25] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:25] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:27] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:27] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:29] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:29] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:31] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:31] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:33] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:33] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:35] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:35] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:37] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:37] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:39] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:39] rpc_server.cc:173: Exception standard: [13:12:39] rpc_tracker_client.h:205: Check failed: period < timeout: Failed to connect to server0.0.0.0:9190
+Stack trace:
+  [bt] (0) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc(dmlc::LogMessageFatal::~LogMessageFatal()+0x32) [0x40a822]
+  [bt] (1) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x4168fd]
+  [bt] (2) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x418733]
+  [bt] (3) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41d43a]
+  [bt] (4) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x41478d]
+  [bt] (5) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x414869]
+  [bt] (6) /lib/x86_64-linux-gnu/libpthread.so.0(+0xea99) [0x7f80b228ba99]
+  [bt] (7) /home/adhak001/dev/tvm/apps/cpp_rpc_long_lived/tvm_rpc() [0x417bed]
+  [bt] (8) /root/anaconda3/lib/libstdc++.so.6(+0xc8421) [0x7f80b25eb421]
+
+
+[13:12:39] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:39] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:41] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:41] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:43] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:43] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:45] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:45] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:47] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:47] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:49] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:49] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:51] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:51] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:53] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:53] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:55] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:55] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:57] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:57] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:12:59] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:12:59] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:13:01] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:13:01] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:13:03] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:13:03] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.
+[13:13:05] rpc_tracker_client.h:198: Tracker connecting to 0.0.0.0:9190
+[13:13:05] rpc_tracker_client.h:206: Cannot connect to tracker 0.0.0.0:9190 retry in 2 seconds.

@@ -1,0 +1,105 @@
+[[18:22:0218:22:02] ] main.ccmain.cc::8484: : host        = host        = 0.0.0.00.0.0.0
+
+[[18:22:0218:22:02] ] main.ccmain.cc::8585: : port        = port        = 90909090
+
+[[18:22:0218:22:02] ] main.ccmain.cc::8686: : port_end    = port_end    = 91809180
+
+[[18:22:0218:22:02] ] main.ccmain.cc::8787: : tracker     = tracker     = ('192.168.0.90', 9190)('192.168.0.90', 9190)
+
+[[18:22:0218:22:02] ] main.ccmain.cc::8888: : key         = key         = adityaaditya
+
+[[18:22:0218:22:02] ] main.ccmain.cc:89:: 89custom_addr = : 
+custom_addr = 
+[18:22:02[] 18:22:02main.cc] :main.cc90:: 90silent      = : Falsesilent      = 
+False[
+18:22:02[] 18:22:02main.cc] :main.cc240:: 240Starting CPP Server, Press Ctrl+C to stop.: 
+Starting CPP Server, Press Ctrl+C to stop.
+[[18:22:0218:22:02] ] rpc_server.cc../../src/common/socket.h::120263: : bind to Bind failed to 0.0.0.00.0.0.0::90909090
+
+[18:22:02] rpc_server.cc:120: bind to 0.0.0.0:9091
+[18:22:02] rpc_tracker_client.h:198: Tracker connecting to 192.168.0.90:9190
+[18:22:02] rpc_tracker_client.h:198: Tracker connecting to 192.168.0.90:9190
+[18:22:02] main.cc:84: host        = 0.0.0.0
+[18:22:02] main.cc:85: port        = 9090
+[18:22:02] main.cc:86: port_end    = 9180
+[18:22:02] main.cc:87: tracker     = ('192.168.0.90', 9190)
+[18:22:02] main.cc:88: key         = aditya
+[18:22:02] main.cc:89: custom_addr = 
+[18:22:02] main.cc:90: silent      = False
+[18:22:02] main.cc:240: Starting CPP Server, Press Ctrl+C to stop.
+[18:22:02] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9090
+[18:22:02] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9091
+[18:22:02] rpc_server.cc:120: bind to 0.0.0.0:9092
+[18:22:02] rpc_tracker_client.h:198: Tracker connecting to 192.168.0.90:9190
+[18:22:02] main.cc:84: host        = 0.0.0.0
+[18:22:02] main.cc:85: port        = 9090
+[18:22:02] main.cc:86: port_end    = 9180
+[18:22:02] main.cc:87: tracker     = ('192.168.0.90', 9190)
+[18:22:02] main.cc:88: key         = aditya
+[18:22:02] main.cc:89: custom_addr = 
+[18:22:02] main.cc:90: silent      = False
+[18:22:02] main.cc:240: Starting CPP Server, Press Ctrl+C to stop.
+[18:22:02] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9090
+[18:22:02] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9091
+[18:22:02] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9092
+[18:22:02] rpc_server.cc:120: bind to 0.0.0.0:9093
+[18:22:02] rpc_tracker_client.h:198: Tracker connecting to 192.168.0.90:9190
+Terminated
+Terminated
+Terminated
+Terminated
+Current working dir: /home/adhak001/dev_tvm/aditya_tvm/apps/cpp_rpc
+Proc 1 has died, restarting it
+Proc 2 has died, restarting it
+Proc 3 has died, restarting it
+Proc 4 has died, restarting it
+[[18:29:2418:29:24] ] main.ccmain.cc::8484: : host        = host        = 0.0.0.00.0.0.0
+
+[[18:29:2418:29:24] ] main.ccmain.cc::8585: : port        = port        = 90909090
+
+[[18:29:2418:29:24] ] main.ccmain.cc::8686: : port_end    = port_end    = 91809180
+
+[[18:29:2418:29:24] ] main.ccmain.cc::8787: : tracker     = tracker     = ('192.168.0.90', 9190)('192.168.0.90', 9190)
+
+[18:29:24[] 18:29:24main.cc] :main.cc88:: 88key         = : adityakey         = 
+aditya[
+18:29:24[] 18:29:24main.cc] :main.cc89:: 89custom_addr = : 
+custom_addr = 
+[[18:29:2418:29:24] ] main.ccmain.cc::9090: : silent      = silent      = FalseFalse
+
+[[18:29:2418:29:24] ] main.ccmain.cc::240240: : Starting CPP Server, Press Ctrl+C to stop.Starting CPP Server, Press Ctrl+C to stop.
+
+[[18:29:2418:29:24] ] ../../src/common/socket.hrpc_server.cc::263120: : Bind failed to bind to 0.0.0.00.0.0.0::90909090
+
+[18:29:24] rpc_server.cc:120: bind to 0.0.0.0:9091
+[[18:29:2418:29:24] ] rpc_tracker_client.hrpc_tracker_client.h::198198: : Tracker connecting to Tracker connecting to 192.168.0.90:9190192.168.0.90:9190
+
+[18:29:24] main.cc:84: host        = 0.0.0.0
+[18:29:24] main.cc:85: port        = 9090
+[18:29:24] main.cc:86: port_end    = 9180
+[18:29:24] main.cc:87: tracker     = ('192.168.0.90', 9190)
+[18:29:24] main.cc:88: key         = aditya
+[18:29:24] main.cc:89: custom_addr = 
+[18:29:24] main.cc:90: silent      = False
+[18:29:24] main.cc:240: Starting CPP Server, Press Ctrl+C to stop.
+[18:29:24] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9090
+[18:29:24] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9091
+[18:29:24] rpc_server.cc:120: bind to 0.0.0.0:9092
+[18:29:24] rpc_tracker_client.h:198: Tracker connecting to 192.168.0.90:9190
+[18:29:24] main.cc:84: host        = 0.0.0.0
+[18:29:24] main.cc:85: port        = 9090
+[18:29:24] main.cc:86: port_end    = 9180
+[18:29:24] main.cc:87: tracker     = ('192.168.0.90', 9190)
+[18:29:24] main.cc:88: key         = aditya
+[18:29:24] main.cc:89: custom_addr = 
+[18:29:24] main.cc:90: silent      = False
+[18:29:24] main.cc:240: Starting CPP Server, Press Ctrl+C to stop.
+[18:29:24] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9090
+[18:29:24] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9091
+[18:29:24] ../../src/common/socket.h:263: Bind failed to 0.0.0.0:9092
+[18:29:24] rpc_server.cc:120: bind to 0.0.0.0:9093
+[18:29:24] rpc_tracker_client.h:198: Tracker connecting to 192.168.0.90:9190
+Terminated
+Terminated
+Terminated
+Terminated

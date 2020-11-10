@@ -1,0 +1,25 @@
+Base Directory : ./rpc_140548
+[13:18:18] rpc_env.cc:75: Load module from ./rpc_140548/tmp_func_af599735eb6085ab.tar.so ...
+[13:18:32] /home/adhak001/dev_tvm/aditya_tvm/src/runtime/cuda/cuda_module.cc:59: Destroying the CUDA Module
+[13:18:32] /home/adhak001/dev_tvm/aditya_tvm/src/runtime/cuda/cuda_module.cc:61: CUDA Set Device as: 0
+[13:18:32] /home/adhak001/dev_tvm/aditya_tvm/src/runtime/cuda/cuda_module.cc:73: cuModuleUnload is successful.
+[13:18:32] rpc_server.cc:435: Finish serving 192.168.0.80:58768
+[13:18:32] rpc_server.cc:231: Socket Closed
+[13:18:32] rpc_server.cc:234: Last CUDA ERROR: 0
+[13:18:32] rpc_server.cc:241: Counting the number of instances Tuned till now: 8 Multiprocessor count: 80
+[13:18:32] rpc_server.cc:248: More than quarter of GPU memory exceeded. Resetting GPU context. Number of time context is reset: 1
+[Thread 0x7fffd9c0a700 (LWP 140565) exited]
+Reading PID of nvidia-cuda-mps-server did not work.
+[13:18:32] rpc_server.cc:418: Connection success 192.168.0.80:58770
+[New Thread 0x7fffd9c0a700 (LWP 140637)]
+[13:18:32] rpc_server.cc:211: GPU Memory: Total: 15 Free: 15 Occupied Mem: 0 Time GPU is Reset: 1
+PID of the Process: 140548
+Base Directory : ./rpc_140548
+[13:18:33] rpc_env.cc:75: Load module from ./rpc_140548/tmp_func_ade26ac1b9d015f9.tar.so ...
+
+CUDA Exception: Warp Illegal Address
+The exception was triggered at PC 0x7fffd4ab5290
+
+Thread 2 "tvm_rpc" received signal CUDA_EXCEPTION_14, Warp Illegal Address.
+[Switching focus to CUDA kernel 213, grid 1120, block (40,0,0), thread (64,0,0), device 0, sm 1, warp 3, lane 0]
+0x00007fffd4ab54c0 in default_function_kernel0<<<(196,1,1),(128,1,1)>>> ()

@@ -249,6 +249,7 @@ class RPCRunner(Runner):
 
         return kwargs
 
+    '''
     def run(self, measure_inputs, build_results):
         results = []
         remote_args = (self.key, self.host, self.port, self.priority, self.timeout)
@@ -278,6 +279,74 @@ class RPCRunner(Runner):
                     results.append(res)
 
         return results
+    '''
+
+    def run(self, measure_inputs, build_results):
+        results = []
+        remote_args = (self.key, self.host, self.port, self.priority, self.timeout)
+
+        for i in range(0, len(measure_inputs), self.n_parallel):
+            #futures = []
+            #for measure_inp, build_res in zip(measure_inputs[i:i+self.n_parallel],
+             #                                 build_results[i:i+self.n_parallel]):
+            futures = run_through_rpc_modified(measure_inputs[i:i+self.n_parallel],build_results[i:i+self.n_parallel],
+                                            self.number,
+                                            self.repeat,
+                                            self.min_repeat_ms,
+                                            self.cooldown_interval,
+                                            remote_args,
+                                            self.ref_input,
+                                            self.ref_output,
+                                            2,)
+            #futures.append(ret)
+            print("Futures:", len(futures))
+            for future in futures:
+                #res = future.get()
+                res = future
+                if isinstance(res, Exception):   # executor error or timeout
+                    results.append(MeasureResult((str(res),), MeasureErrorNo.RUN_TIMEOUT,
+                                                 self.timeout, time.time()))
+                else:
+                    results.append(res)
+
+        return results
+    '''
+    def run(self, measure_inputs, build_results):
+        results = []
+        remote_args = (self.key, self.host, self.port, self.priority, self.timeout)
+
+        for i in range(0, len(measure_inputs), self.n_parallel):
+            print("Value of i: ", i)
+            futures = []
+            ret = self.executor.submit(run_through_rpc_modified,
+                                       measure_inputs[i:i+self.n_parallel],
+                                       build_results[i:i+self.n_parallel],
+                                       self.number,
+                                       self.repeat,
+                                       self.min_repeat_ms,
+                                       self.cooldown_interval,
+                                       remote_args,
+                                       self.ref_input,
+                                       self.ref_output,
+                                       2,)
+            futures.append(ret)
+        all_results = []
+        print("Printing len of Results (futures): *************")
+        print (len(futures))
+        #for future in futures:
+        res = ret.get()
+        #all_results = all_results+res
+        for parts in res:
+            if isinstance(parts, Exception):   # executor error or timeout
+                results.append(MeasureResult((str(parts),), MeasureErrorNo.RUN_TIMEOUT,
+                                             self.timeout, time.time()))
+            else:
+                results.append(parts)
+                
+        print("************printing results--------------------")
+        print(results)
+        return results
+    '''
 
 class LocalRunner(RPCRunner):
     """Run generated code on local devices.
@@ -515,6 +584,229 @@ def run_through_rpc(measure_input, build_result,
     time.sleep(cooldown_interval)
     return MeasureResult(costs, errno, tstamp - tic + build_result.time_cost, tstamp)
 
+#modified rpc aditya
+def run_through_rpc_modified(measure_input, build_result,
+                    number, repeat, min_repeat_ms, cooldown_interval,
+                             remote_args, ref_input=None, ref_output=None, n_request=1):
+    """Run a generated library through rpc
+
+    Parameters
+    ----------
+    measure_input: MeasureInput
+        The raw measure input
+    build_result: BuildResult
+        The result returned from Builder. This contains the path to the generated library.
+    number: int
+        The number of times to run the generated code for taking average.
+        We call these runs as one `repeat` of measurement.
+    repeat : int, optional
+        The number of times to repeat the measurement.
+        In total, the generated code will be run (1 + number x repeat) times,
+        where the first one is warm up and will be discarded.
+        The returned result contains `repeat` costs,
+        each of which is an average of `number` costs.
+    min_repeat_ms: int, optional
+        The minimum duration of one `repeat` in milliseconds.
+        By default, one `repeat` contains `number` runs. If this parameter is set,
+        the parameters `number` will be dynamically adjusted to meet the
+        minimum duration requirement of one `repeat`.
+        i.e., When the run time of one `repeat` falls below this time, the `number` parameter
+        will be automatically increased.
+    cooldown_interval: float
+        The cool down interval between two measurements
+    remote_args: Tuple
+        The argument for request_remote
+    ref_input: List of np.ndarray
+        The reference input used for checking correctness
+    ref_output: List of np.ndarray
+        The reference output used for checking correctness
+    """
+    #if isinstance(build_result, MeasureResult):
+    #    return build_result
+
+    tic = time.time()
+    errno = MeasureErrorNo.NO_ERROR
+
+    total_instances = len(build_result)
+
+    remotes = []
+    results = []
+
+    print("*** Trying to connect ***")
+    # upload built module
+    remote1 = request_remote(*remote_args)
+    #remote2 = request_remote(*remote_args)
+    #remotes.append(remote1)
+    #remotes.append(remote2)
+    print("**** Connected to one ***", remote1, " *** Size of build results *** ",len(build_result))
+    # Program the FPGA every single time when targeting VTA
+    if hasattr(measure_input[0].target, 'device_name') and \
+       measure_input[0].target.device_name == 'vta':
+        # pylint: disable=import-outside-toplevel
+        from vta import program_fpga, reconfig_runtime
+        program_fpga(remote, None)
+        reconfig_runtime(remote1)
+        
+
+    func_list = []
+    ctx_list = []
+    time_f_list = []
+    i = 0
+    costs_list = []
+    
+    time_f = None
+    ctx = None
+    func = None
+    
+    for i,build in enumerate(build_result):
+        print("Begin uploading to: ",remote1, i)
+        if isinstance(build, MeasureResult):
+            results.append(build)
+            continue
+        else:
+            try:
+                remote1.upload(build.filename)
+                func = remote1.load_module(os.path.split(build.filename)[1])
+                ctx = remote1.context(str(measure_input[i].target), 0)
+                time_f = func.time_evaluator(
+                    func.entry_name, ctx, number=number, repeat=repeat, min_repeat_ms=min_repeat_ms)
+                func_list.append(func)
+                ctx_list.append(ctx)
+                time_f_list.append(time_f)
+                if ref_input:
+                    args = [nd.array(x, ctx=ctx) for x in ref_input]
+                else:
+                    # create empty arrays on the remote device and copy them once.
+                    # This can avoid some memory issues that make the measurement results unreliable.
+                    args = [nd.empty(x[0], dtype=x[1], ctx=ctx) for x in build.arg_info]
+                    args = [nd.array(x, ctx=ctx) for x in args]
+                    ctx.sync()
+                    costs = time_f(*args).results
+                print("Costs.....")
+                print(costs)
+                costs_list.append(costs)
+                print("Cost appended")
+                remote1.remove(build_result[i].filename)
+                remote1.remove(os.path.splitext(build_result[i].filename)[0] + '.so')
+                print("Removed")
+                remote1.remove('')
+            except TVMError as exc:
+                print("*****00000000 Exception Recorded ******&&&&***********---")
+                msg = str(exc)
+                print("Message: ",msg)
+                if "Stack trace returned" in msg:
+                    msg = msg[:msg.index("Stack trace returned")]
+                    if "CUDA Source" in msg:
+                        msg = msg[:msg.index("CUDA Source")]
+                costs = (RuntimeError(msg[:1024]),)
+                #costs_list = costs*5
+                costs_list.append(costs)
+                errno = MeasureErrorNo.RUNTIME_DEVICE
+        tstamp = time.time()
+        time.sleep(cooldown_interval)
+
+        
+        time.sleep(cooldown_interval)
+        print("File uploaded: ", build.filename)
+        # set input
+            
+    print("Uploading to remote complete.")
+        
+    remote = remote1
+    print("--------------------............Finished uploading all profiles......................------------------")
+
+    '''
+        for i in range(len(build_result)):
+            if isinstance(build_result[i], MeasureResult):
+                continue
+            
+            func = remote.load_module(os.path.split(build_result[i].filename)[1])
+            ctx = remote.context(str(measure_input[i].target), 0)
+            time_f = func.time_evaluator(
+                func.entry_name, ctx, number=number, repeat=repeat, min_repeat_ms=min_repeat_ms)
+
+            func_list.append(func)
+            ctx_list.append(ctx)
+            time_f_list.append(time_f)
+        
+
+        print("Finished creating context")
+        # set input
+        if ref_input:
+            args = [nd.array(x, ctx=ctx_list[0]) for x in ref_input]
+        else:
+            # create empty arrays on the remote device and copy them once.
+            # This can avoid some memory issues that make the measurement results unreliable.
+            args = [nd.empty(x[0], dtype=x[1], ctx=ctx_list[0]) for x in build_result[0].arg_info]
+            args = [nd.array(x, ctx=ctx_list[0]) for x in args]
+            ctx.sync()
+
+        #counter = 0
+        for i in range(len(time_f_list)):
+            #if isinstance(build_result[i], MeasureResult):
+            #    continue
+            costs = time_f_list[i](*args).results
+            costs_list.append(costs)
+            #counter = counter + 1
+
+        
+        # clean up remote files
+        for i in range(total_instances):
+            if isinstance(build_result[i], MeasureResult):
+                continue
+
+            remote.remove(build_result[i].filename)
+            remote.remove(os.path.splitext(build_result[i].filename)[0] + '.so')
+        remote.remove('')
+    '''
+
+    print("Length of cost list", len(costs_list))
+    for costs in costs_list:       
+        if len(costs) > 2:  # remove largest and smallest value to reduce variance
+            costs = list(costs)
+            costs.sort()
+            costs = tuple(costs[1:-1])
+
+    # check correctness of output
+    if ref_output:
+        for expected, real in zip(ref_output, args):
+            if not np.allclose(expected, real.asnumpy(), rtol=1e-4):
+                logger.warning("Wrong Answer!")
+                errno = MeasureErrorNo.WRONG_ANSWER
+    '''
+    except TVMError as exc:
+        print("*****00000000 Exception Recorded ******&&&&***********---")
+        msg = str(exc)
+        print("Message: ",msg)
+        if "Stack trace returned" in msg:
+            msg = msg[:msg.index("Stack trace returned")]
+        if "CUDA Source" in msg:
+            msg = msg[:msg.index("CUDA Source")]
+        costs = (RuntimeError(msg[:1024]),)
+        costs_list = costs*5
+        errno = MeasureErrorNo.RUNTIME_DEVICE
+    tstamp = time.time()
+    time.sleep(cooldown_interval)
+    #make a result objects
+    '''    
+    counter2 = 0
+    print("Size of cost list")
+    print(len(costs_list))
+    print("Time_f_list number: ",len(time_f_list))
+
+    for i,build in enumerate(build_result):
+        if isinstance(build, MeasureResult):
+            #results.append(build)
+            continue
+        else:
+            #return MeasureResult(costs, errno, tstamp - tic + build_result.time_cost, tstamp)
+            print("Counter2 and i", counter2, i)
+            if counter2<len(costs_list):
+            #print(counter2)
+                result = MeasureResult(costs_list[counter2], errno, tstamp - tic + build.time_cost, tstamp)
+                results.append(result)
+            counter2 = counter2 + 1 
+    return results
 
 def request_remote(device_key, host=None, port=None, priority=1, timeout=60):
     """Request a remote session
