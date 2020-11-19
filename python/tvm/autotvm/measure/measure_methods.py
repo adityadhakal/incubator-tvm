@@ -289,7 +289,8 @@ class RPCRunner(Runner):
             #futures = []
             #for measure_inp, build_res in zip(measure_inputs[i:i+self.n_parallel],
              #                                 build_results[i:i+self.n_parallel]):
-            futures = run_through_rpc_modified(measure_inputs[i:i+self.n_parallel],build_results[i:i+self.n_parallel],
+            futures = run_through_rpc_modified(measure_inputs[i:i+self.n_parallel//4],
+                                               build_results[i:i+self.n_parallel//4],
                                             self.number,
                                             self.repeat,
                                             self.min_repeat_ms,
@@ -635,9 +636,7 @@ def run_through_rpc_modified(measure_input, build_result,
     print("*** Trying to connect ***")
     # upload built module
     remote1 = request_remote(*remote_args)
-    #remote2 = request_remote(*remote_args)
-    #remotes.append(remote1)
-    #remotes.append(remote2)
+    error_flag = 0
     print("**** Connected to one ***", remote1, " *** Size of build results *** ",len(build_result))
     # Program the FPGA every single time when targeting VTA
     if hasattr(measure_input[0].target, 'device_name') and \
@@ -648,6 +647,7 @@ def run_through_rpc_modified(measure_input, build_result,
         reconfig_runtime(remote1)
         
 
+    # empty list for future.
     func_list = []
     ctx_list = []
     time_f_list = []
@@ -657,14 +657,28 @@ def run_through_rpc_modified(measure_input, build_result,
     time_f = None
     ctx = None
     func = None
-    
+
+    #operating part
     for i,build in enumerate(build_result):
         print("Begin uploading to: ",remote1, i)
+        if error_flag == 1:
+#            error_flag = 0
+#            server_ok = check_remote(str(measure_input[i].target),*remote_args)
+#            if server_ok:
+#                print("Server is okay, processed without requesting new one ")
+#            else:
+            #del remote1
+            print("---- requesting new remote --- ")
+            #remote1 = request_remote(*remote_args)
+            print("--- Got a new remote *** ",remote1)
+            error_flag = 0
+            
         if isinstance(build, MeasureResult):
             results.append(build)
             continue
         else:
             try:
+                #trying to upload the filename.
                 remote1.upload(build.filename)
                 func = remote1.load_module(os.path.split(build.filename)[1])
                 ctx = remote1.context(str(measure_input[i].target), 0)
@@ -681,17 +695,20 @@ def run_through_rpc_modified(measure_input, build_result,
                     args = [nd.empty(x[0], dtype=x[1], ctx=ctx) for x in build.arg_info]
                     args = [nd.array(x, ctx=ctx) for x in args]
                     ctx.sync()
+                    #execute the file
                     costs = time_f(*args).results
                 print("Costs.....")
                 print(costs)
+                #add the cost 
                 costs_list.append(costs)
                 print("Cost appended")
                 remote1.remove(build_result[i].filename)
                 remote1.remove(os.path.splitext(build_result[i].filename)[0] + '.so')
-                print("Removed")
+                print("Removed two files")
                 remote1.remove('')
             except TVMError as exc:
                 print("*****00000000 Exception Recorded ******&&&&***********---")
+                error_flag = 1
                 msg = str(exc)
                 print("Message: ",msg)
                 if "Stack trace returned" in msg:
@@ -702,11 +719,14 @@ def run_through_rpc_modified(measure_input, build_result,
                 #costs_list = costs*5
                 costs_list.append(costs)
                 errno = MeasureErrorNo.RUNTIME_DEVICE
+                print("Sleeping 1 second")
+                #return results #test state,emts
+                time.sleep(1) #one second sleep if there is an error
         tstamp = time.time()
         time.sleep(cooldown_interval)
-
+        print(" ----Finished Cooldown---- ")
         
-        time.sleep(cooldown_interval)
+        #time.sleep(cooldown_interval)
         print("File uploaded: ", build.filename)
         # set input
             
@@ -760,7 +780,7 @@ def run_through_rpc_modified(measure_input, build_result,
         remote.remove('')
     '''
 
-    print("Length of cost list", len(costs_list))
+    print("Length of cost list: ", len(costs_list))
     for costs in costs_list:       
         if len(costs) > 2:  # remove largest and smallest value to reduce variance
             costs = list(costs)
