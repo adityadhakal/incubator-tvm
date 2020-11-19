@@ -20,6 +20,11 @@ How to Install
 This repo is forked from original TVM so please build it with following instruction
 https://tvm.apache.org/docs/install/from_source.html
 
+How to replicate errors
+-----------------------
+Compile this code and run with any TVM server. 
+Wait a bit and you would see errors.
+
 
 
 <img src=https://raw.githubusercontent.com/apache/incubator-tvm-site/main/images/logo/tvm-logo-small.png width=128/> Open Deep Learning Compiler Stack
