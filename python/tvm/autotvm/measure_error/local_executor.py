@@ -19,7 +19,6 @@
 import signal
 
 from multiprocessing import Process, Queue
-
 try:
     from queue import Empty
 except ImportError:
@@ -46,7 +45,6 @@ def kill_child_processes(parent_pid, sig=signal.SIGTERM):
         except psutil.NoSuchProcess:
             return
 
-
 def _execute_func(func, queue, args, kwargs):
     """execute function and return the result or exception to a queue"""
     try:
@@ -59,10 +57,33 @@ def _execute_func(func, queue, args, kwargs):
 def call_with_timeout(queue, timeout, func, args, kwargs):
     """A wrapper to support timeout of a function call"""
 
+    import time
     # start a new process for timeout (cannot use thread because we have c function)
     p = Process(target=_execute_func, args=(func, queue, args, kwargs))
+    #measure the timeout aditya
+    print("Timeout is: ",timeout)
+    timeout = 5000
     p.start()
+    start_time = time.time()
     p.join(timeout=timeout)
+    end_time = time.time()
+    queue.put(executor.TimeoutError())
+
+    print("Timeout time is. Timeout is ",(end_time-start_time),timeout)
+    kill_child_processes(p.pid)
+    p.terminate()
+    p.join()
+
+
+def call_without_timeout(queue, timeout, func, args, kwargs):
+    """A wrapper to support a function call without timeout. Adi extended it"""
+
+    # start a new process for timeout (cannot use thread because we have c function)
+    p = Process(target=_execute_func, args=(func, queue, args, kwargs))
+    #measure the timeout aditya
+    print("Timeout is %s",timeout)
+    p.start()
+    p.join()
 
     queue.put(executor.TimeoutError())
 
@@ -70,6 +91,7 @@ def call_with_timeout(queue, timeout, func, args, kwargs):
     p.terminate()
     p.join()
 
+    
 
 class LocalFuture(executor.Future):
     """Local wrapper for the future
@@ -81,7 +103,6 @@ class LocalFuture(executor.Future):
     queue: multiprocessing.Queue
         queue for receiving the result of this task
     """
-
     def __init__(self, process, queue):
         self._done = False
         self._process = process
@@ -113,7 +134,6 @@ class LocalFutureNoFork(executor.Future):
     This is a none-fork version of LocalFuture.
     Use this for the runtime that does not support fork (like cudnn)
     """
-
     def __init__(self, result):
         self._result = result
 
@@ -136,22 +156,21 @@ class LocalExecutor(executor.Executor):
         (e.g. cuda runtime, cudnn). Set this to False if you have used these runtime
         before submitting jobs.
     """
-
     def __init__(self, timeout=None, do_fork=True):
         self.timeout = timeout or executor.Executor.DEFAULT_TIMEOUT
         self.do_fork = do_fork
 
         if self.do_fork:
             if not psutil:
-                raise RuntimeError(
-                    "Python package psutil is missing. " "please try `pip install psutil`"
-                )
+                raise RuntimeError("Python package psutil is missing. "
+                                   "please try `pip install psutil`")
 
     def submit(self, func, *args, **kwargs):
         if not self.do_fork:
             return LocalFutureNoFork(func(*args, **kwargs))
 
-        queue = Queue(2)  # Size of 2 to avoid a race condition with size 1.
-        process = Process(target=call_with_timeout, args=(queue, self.timeout, func, args, kwargs))
+        queue = Queue(2)
+        process = Process(target=call_with_timeout,
+                          args=(queue, self.timeout, func, args, kwargs))
         process.start()
         return LocalFuture(process, queue)

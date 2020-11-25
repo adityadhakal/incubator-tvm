@@ -16,13 +16,11 @@
 # under the License.
 """ Abstraction for asynchronous job execution """
 
-
 class Executor(object):
     """
     Base abstract executor interface for asynchronous job submission.
     Allows submit asynchronous jobs and returns the Future object.
     """
-
     # timeout for jobs that may hang
     DEFAULT_TIMEOUT = 120
 
@@ -58,7 +56,6 @@ class Future(object):
     Future objects store the state of tasks--can be polled for
     result or a blocking call to retrieve the result can be used.
     """
-
     def done(self):
         """
         Return True if job was successfully cancelled or finished running.
@@ -85,7 +82,6 @@ class Future(object):
         TimeoutError : if the result call timeouts.
         """
         raise NotImplementedError()
-
 
 class FutureError(RuntimeError):
     """Base error class of all future events"""
