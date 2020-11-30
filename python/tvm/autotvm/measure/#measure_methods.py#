@@ -377,6 +377,7 @@ class RPCRunner(Runner):
             '''
             #    futures.append(ret)
             futures_got = futures.get()
+            if isinstance(
 
             print("Size of Future: ", len(futures_got))
 
