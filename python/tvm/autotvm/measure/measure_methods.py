@@ -98,6 +98,8 @@ class LocalBuilder(Builder):
         self.tmp_dir = tempfile.mkdtemp()
 
     def build(self, measure_inputs):
+        print("\n*******------ Building Started ------*********")
+        start_building = time.monotonic()
         results = []
 
         shutil.rmtree(self.tmp_dir, ignore_errors=True)
@@ -158,6 +160,8 @@ class LocalBuilder(Builder):
                     # return BuildResult
                     results.append(res)
 
+        end_building = time.monotonic()
+        print("**** Total time taken to building: ***** : ",(end_building-start_building))
         return results
 
 
@@ -295,6 +299,7 @@ class RPCRunner(Runner):
         return kwargs
     '''
     def run(self, measure_inputs, build_results):
+        run_start = time.monotonic()
         results = []
         remote_args = (self.key, self.host, self.port, self.priority, self.timeout)
 
@@ -328,10 +333,12 @@ class RPCRunner(Runner):
                     )
                 else:
                     results.append(res)
-
+        end_runtime = time.monotonic()
+        print("time to run/profile: ",(end_runtime-run_start))
         return results
     '''
     def run(self, measure_inputs, build_results):
+        run_start = time.monotonic()
         results = []
         remote_args = (self.key, self.host, self.port, self.priority, self.timeout)
 
@@ -339,63 +346,92 @@ class RPCRunner(Runner):
         measures_per_client = self.n_parallel
 
         #for i in range(0, len(measure_inputs), self.n_parallel):
-        for i in range(0, len(measure_inputs), measures_per_client):
+        for i in range(0, len(measure_inputs), self.n_parallel):
+            measures_per_client = len(measure_inputs[i:i+self.n_parallel])
+            print("Number of Configuration to Profile: ",measures_per_client)
             bitmap = [0]*measures_per_client
             futures = [None]*measures_per_client
+            number_of_results = 0
+            futures_got = []
+            repeat = 0
             #futures = []
             #for measure_inp, build_res in zip(
             #    measure_inputs[i : i + self.n_parallel], build_results[i : i + self.n_parallel]
             #):
-            futures = self.executor.submit(
-                run_through_rpc_modified,
-                measure_inputs[i:i+measures_per_client],
-                build_results[i:i+measures_per_client],
-                self.number,
-                self.repeat,
-                self.min_repeat_ms,
-                self.cooldown_interval,
-                remote_args,
-                bitmap,
-                self.ref_input,
-                self.ref_output,
-                self.enable_cpu_cache_flush,
-            )
-            '''
-            futures = run_through_rpc_modified(
-                measure_inputs[i:i+measures_per_client],
-                build_results[i:i+measures_per_client],
-                self.number,
-                self.repeat,
-                self.min_repeat_ms,
-                self.cooldown_interval,
-                remote_args,
-                bitmap,
-                self.ref_input,
-                self.ref_output,
-                self.enable_cpu_cache_flush,
-            )
-            '''
-            #    futures.append(ret)
-            futures_got = futures.get()
-
-            print("Size of Future: ", len(futures_got))
-
-            for j,future in enumerate(futures_got):
-                #res = future.get()
-                res = future
-                if isinstance(res, Exception):  # executor error or timeout
-                    results.append(
-                        MeasureResult(
-                            (str(res),), MeasureErrorNo.RUN_TIMEOUT, self.timeout, time.time()
-                        )
-                    )
+            while number_of_results < measures_per_client:
+                futures = self.executor.submit(
+                    run_through_rpc_modified,
+                    measure_inputs[i:i+measures_per_client],
+                    build_results[i:i+measures_per_client],
+                    self.number,
+                    self.repeat,
+                    self.min_repeat_ms,
+                    self.cooldown_interval,
+                    remote_args,
+                    bitmap,
+                    self.ref_input,
+                    self.ref_output,
+                    self.enable_cpu_cache_flush,
+                )
+                #futures = run_through_rpc_modified(
+                #measure_inputs[i:i+measures_per_client],
+                #build_results[i:i+measures_per_client],
+                #self.number,
+                #self.repeat,
+                #self.min_repeat_ms,
+                #self.cooldown_interval,
+                #remote_args,
+                #bitmap,
+                #self.ref_input,
+                #self.ref_output,
+                #self.enable_cpu_cache_flush,
+                #)
+                
+                #    futures.append(ret)
+                futures_got = futures.get()
+                
+                if isinstance(futures_got, Exception):
+                    if repeat == 0:
+                        repeat = 1
+                        print("Got an error before receiving profile of configuration. Repeat")
+                        futures_got = []
+                        bitmap = [0]*measures_per_client
+                        #redo this once.
+                        continue
+                    else:
+                        print("This has been repeated, we are going to accept the result this time")
+                    #entire thing is thrown out
                 else:
-                    bitmap[j] = 1
-                    results.append(res)
-            print("Bitmap in parent: ", bitmap)
-            print("Number of final results: ",len(results))
-        return results
+                    print("Size of Future: ", len(futures_got))
 
+                    for j,future in enumerate(futures_got):
+                        #res = future.get()
+                        res = future
+                        if isinstance(res, Exception):  # executor error or timeout
+                            if bitmap[j]==1 or bitmap[j]==2: #only append if it has been tried before
+                                results.append(
+                                    MeasureResult(
+                                        (str(res),), MeasureErrorNo.RUN_TIMEOUT, self.timeout, time.time()
+                                    )
+                                )
+                                bitmap[j]=2
+                                number_of_results = number_of_results+1
+                            else:
+                                bitmap[j] = 1
+                        else:
+                            number_of_results = number_of_results+1
+                            bitmap[j] = 2                    
+                            results.append(res)
+                print("Bitmap in parent: ", bitmap)
+                print("Number of final results: ",number_of_results)
+                #make sure loop ends in 2nd round.
+                if repeat == 1 and number_of_results < measures_per_client:
+                    #makes sure the loop ends.
+                    number_of_results = measures_per_client
+        end_runtime = time.monotonic()
+        print("time to run/profile: ",(end_runtime-run_start))
+        return results
+    
 
 class LocalRunner(RPCRunner):
     """Run generated code on local devices.
@@ -620,6 +656,8 @@ def run_through_rpc(
         To make this option effective, the argument `number` should also be set to 1.
         This is only has effect on CPU task.
     """
+    start_time = time.monotonic()
+    print("---***---Start time for this instance:,",start_time)
     if isinstance(build_result, MeasureResult):
         return build_result
 
@@ -627,6 +665,7 @@ def run_through_rpc(
     errno = MeasureErrorNo.NO_ERROR
     try:
         # upload built module
+        start_remote = time.process_time()
         remote = request_remote(*remote_args)
         # Program the FPGA every single time when targeting VTA
         if (
@@ -638,7 +677,11 @@ def run_through_rpc(
 
             program_fpga(remote, None)
             reconfig_runtime(remote)
+        end_remote = time.process_time()
+        start_upload = time.process_time()
         remote.upload(build_result.filename)
+        end_upload = time.process_time()
+        print("Remote connection time: ",(end_remote-start_remote)," Upload time: ",(end_upload-start_upload))
         func = remote.load_module(os.path.split(build_result.filename)[1])
         ctx = remote.context(str(measure_input.target), 0)
 
@@ -700,6 +743,9 @@ def run_through_rpc(
         errno = MeasureErrorNo.RUNTIME_DEVICE
     tstamp = time.time()
     time.sleep(cooldown_interval)
+    start_time = time.monotonic()
+    print("---***---End time for this instance:,",start_time)
+
     return MeasureResult(costs, errno, tstamp - tic + build_result.time_cost, tstamp)
 
 
@@ -757,6 +803,9 @@ def run_through_rpc_modified(
     """
     #if isinstance(build_result, MeasureResult):
     #    return build_result
+    start_time = time.monotonic()
+    print("---***---Start time for this instance:,",start_time)
+
     results = []
     cost_list = []
 
@@ -765,7 +814,9 @@ def run_through_rpc_modified(
     print("***** Trying to Connect *******")
     #try:
     # upload built module
+    start_remote = time.process_time()
     remote = request_remote(*remote_args)
+    end_remote = time.process_time()
     # Program the FPGA every single time when targeting VTA
     if (
         hasattr(measure_input[0].target, "device_name")
@@ -788,6 +839,7 @@ def run_through_rpc_modified(
             continue
         else:
             try:
+                start_upload = time.process_time()
                 remote.upload(build.filename)
                 func = remote.load_module(os.path.split(build.filename)[1])
                 ctx = remote.context(str(measure_input[i].target), 0)
@@ -824,6 +876,8 @@ def run_through_rpc_modified(
 
                 costs = time_f(*args).results
                 cost_list.append(costs)
+                end_upload = time.process_time()
+                print("Remote connection time: ",(end_remote-start_remote)," Upload time: ",(end_upload-start_upload))
 
                 #update the bitmap
                 bitmap[i] = 2
@@ -883,6 +937,9 @@ def run_through_rpc_modified(
 
     #return MeasureResult(costs, errno, tstamp - tic + build_result.time_cost, tstamp)
     print("Bitmap in child: ",bitmap)
+    start_time = time.monotonic()
+    print("---***---End time for this instance:,",start_time)
+
     return results
 
 
