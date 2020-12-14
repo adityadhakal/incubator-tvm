@@ -60,7 +60,7 @@ __name__ == "__main__":` block.
 # Now return to python code. Import packages.
 
 import os
-
+import multiprocessing
 import numpy as np
 
 import tvm
@@ -164,6 +164,7 @@ tuning_option = {
 # We will introduce a more sophisticated tuning scheduler in the future.
 
 # You can skip the implementation of this function for this tutorial.
+'''
 def tune_tasks(
     tasks,
     measure_option,
@@ -214,22 +215,31 @@ def tune_tasks(
     autotvm.record.pick_best(tmp_log_file, log_filename)
     #os.remove(tmp_log_file)
 
-
+'''
 ########################################################################
 # Finally, we launch tuning jobs and evaluate the end-to-end performance.
 
 
-def tune_and_evaluate(tuning_opt):
+def evaluate(tuning_opt,log_file,percentage,return_value):
+    os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(percentage)
+    print("For GPU percentage: "+str(percentage))
+    print(os.environ['CUDA_MPS_ACTIVE_THREAD_PERCENTAGE'])
+
     # extract workloads from relay program
     print("Extract tasks...")
     mod, params, input_shape, out_shape = get_network(network, batch_size=1)
     tasks = autotvm.task.extract_from_program(
         mod["main"], target=target, params=params, ops=(relay.op.get("nn.conv2d"),)
     )
-
+    '''
+    log_filename = "%s.log" % network
+    tmp_log_file = log_filename + ".tmp"
+    autotvm.record.pick_best(tmp_log_file, log_filename)
+    '''
     # run tuning tasks
     #print("Tuning...")
     #tune_tasks(tasks, **tuning_opt)
+    mean_runtime = 0
 
     # compile kernels with history best records
     with autotvm.apply_history_best(log_file):
@@ -245,13 +255,46 @@ def tune_and_evaluate(tuning_opt):
 
         # evaluate
         print("Evaluate inference time cost...")
+
         ftimer = module.module.time_evaluator("run", ctx, number=1, repeat=600)
         prof_res = np.array(ftimer().results) * 1000  # convert to millisecond
         print(
             "Mean inference time (std dev): %.2f ms (%.2f ms)"
             % (np.mean(prof_res), np.std(prof_res))
         )
+        mean_runtime = np.mean(prof_res)
+    #return mean_runtime #return the 10 different values
+    return_value = mean_runtime
 
+
+
+from pathlib import Path
+
+#search for all the log files that are available
+def search_for_log_files(percentage,tuning_opt):
+    output = []
+    jobs = []
+    return_values = 0
+    #my_file = Path("/path/to/file")
+    my_file = "./%s-%d.log" %(network,percentage)
+    my_file_tmp = my_file+".tmp"
+    my_file_tmp_path = Path(my_file_tmp)
+    my_file_path = Path(my_file)
+
+    if my_file_tmp_path.is_file():
+        # tmp file exists: pick the best records
+        autotvm.record.pick_best(my_file_tmp, my_file)
+    if my_file_path.is_file():
+        #log file exists, run it through different GPU percentage
+        for i in range(10,110,10):
+            p = multiprocessing.Process(target=evaluate,args = (tuning_opt, my_file,i,return_values))
+            print("Results of evaluation::: ")
+            p.start()
+            p.join()
+            output.append(return_values)
+    print (output)
+
+    return output
 
 # We do not run the tuning in our webpage server since it takes too long.
 # Uncomment the following line to run it by yourself.
@@ -388,4 +431,7 @@ tuning_option = {
         ),
     ),
 }
-tune_and_evaluate(tuning_option)
+
+#tune_and_evaluate(tuning_option)
+output = search_for_log_files(50,tuning_option)
+print(output)

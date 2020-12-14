@@ -394,10 +394,10 @@ class RPCRunner(Runner):
                     if repeat == 0:
                         repeat = 1
                         print("Got an error before receiving profile of configuration. Repeat")
-                        futures_got = []
+                        #futures_got = []
                         bitmap = [0]*measures_per_client
                         #redo this once.
-                        continue
+                        #continue #testing!!!
                     else:
                         print("This has been repeated, we are going to accept the result this time")
                     #entire thing is thrown out
@@ -428,6 +428,8 @@ class RPCRunner(Runner):
                 if repeat == 1 and number_of_results < measures_per_client:
                     #makes sure the loop ends.
                     number_of_results = measures_per_client
+                #testing: Let the loop end anyway.
+                number_of_results = measures_per_client
         end_runtime = time.monotonic()
         print("time to run/profile: ",(end_runtime-run_start))
         return results
